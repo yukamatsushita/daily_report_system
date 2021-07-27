@@ -8,7 +8,7 @@
 <c:set var="commNew" value="${ForwardConst.CMD_NEW.getValue()}" />
 <c:set var="commIdx" value="${ForwardConst.CMD_INDEX.getValue()}" />
 
-<c:import url="..//layout/app.jsp">
+<c:import url="../layout/app.jsp">
   <c:param name="content">
     <c:if test="${flush != null}">
       <div id="flush_success">
@@ -23,7 +23,7 @@
           <th>氏名</th>
           <th>操作</th>
         </tr>
-        <c:forEach var="employee" items="${employee}" varStatus="status">
+        <c:forEach var="employee" items="${employees}" varStatus="status">
           <tr class="row${status.count % 2}">
             <td> <c:out value="${employee.code}" /></td>
             <td> <c:out value="${employee.name}" /></td>
