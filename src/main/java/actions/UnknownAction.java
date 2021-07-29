@@ -13,7 +13,6 @@ public class UnknownAction extends ActionBase {
     //共通エラー画面「お探しのページは見つかりませんでした。」を表示する
     @Override
     public void process() throws ServletException, IOException {
-
         //エラー画面を表示
         //引数で指定されたjspの呼び出しを行う
         forward(ForwardConst.FW_ERR_UNKNOWN); //FW_ERR_UNKNOWNは、JpaConst.javaで指定したjspファイルのパスのこと（FW_ERR_UNKNOWN("error/unknown"),）

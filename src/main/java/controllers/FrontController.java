@@ -54,7 +54,6 @@ public class FrontController extends HttpServlet {
         try {
             //リクエストからパラメータ"action"の値を取得（例："Employee"、"Report"）
             String actionString = request.getParameter(ForwardConst.ACT.getValue());
-
             //該当するActionオブジェクトを作成（例：リクエストからパラメータ action=Employee の場合、action.EmployeeActionオブジェクト）
             //Class.forName("クラス名")は、クラス名をもとにそのクラスのインスタンスを作成するメソッド
             type = Class.forName(String.format("actions.%sAction", actionString));
